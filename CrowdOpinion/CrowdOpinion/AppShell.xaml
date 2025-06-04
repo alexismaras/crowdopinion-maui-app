@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CrowdOpinion.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CrowdOpinion"
+    xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
+    xmlns:pages="clr-namespace:CrowdOpinion.Pages"
+    Title="CrowdOpinion">
+    <TabBar>
+        <ShellContent Title="Answer" ContentTemplate="{DataTemplate pages:Answer}">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="MaterialRegular"
+                    Glyph="{x:Static m:MaterialRegular.Warning}"
+                    Color="{AppThemeBinding Light=Black,
+                                            Dark=White}" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Ask" ContentTemplate="{DataTemplate pages:Ask}">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="MaterialRegular"
+                    Glyph="{x:Static m:MaterialRegular.Question_mark}"
+                    Color="{AppThemeBinding Light=Black,
+                                            Dark=White}" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Profile" ContentTemplate="{DataTemplate pages:Profile}">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="MaterialRegular"
+                    Glyph="{x:Static m:MaterialRegular.Person}"
+                    Color="{AppThemeBinding Light=Black,
+                                            Dark=White}" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+    </TabBar>
+
+</Shell>

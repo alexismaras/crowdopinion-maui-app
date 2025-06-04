@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CrowdOpinion.Pages.Answer"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
+    Title="Answer"
+    x:DataType="viewmodel:AnswerViewModel">
+    <Grid ColumnDefinitions="*,*" RowDefinitions="300,*,200">
+        <Label
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            BackgroundColor="yellow"
+            SemanticProperties.HeadingLevel="Level1"
+            Style="{StaticResource Headline}"
+            Text="{Binding RandomQuestionObject.Question}"
+            TextColor="{AppThemeBinding Light=Black,
+                                        Dark=White}"
+            VerticalOptions="Center" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            BackgroundColor="red"
+            Command="{Binding ChooseAnswerOneCommand}"
+            Text="{Binding RandomQuestionObject.AnswerOne}"
+            TextColor="{AppThemeBinding Light=Black,
+                                        Dark=White}" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="blue"
+            Command="{Binding ChooseAnswerTwoCommand}"
+            Text="{Binding RandomQuestionObject.AnswerTwo}"
+            TextColor="{AppThemeBinding Light=Black,
+                                        Dark=White}" />
+    </Grid>
+</ContentPage>

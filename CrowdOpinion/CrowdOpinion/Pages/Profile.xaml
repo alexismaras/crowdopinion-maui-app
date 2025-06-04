@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CrowdOpinion.Pages.Profile"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:drawables="clr-namespace:CrowdOpinion.Drawables"
+    xmlns:model="clr-namespace:CrowdOpinion.Models"
+    xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
+    Title="Profile"
+    x:DataType="viewmodel:ProfileViewModel">
+    <VerticalStackLayout Padding="20">
+        <CollectionView ItemsSource="{Binding Questions}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type x:String}">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
+                                <SwipeItem
+                                    BackgroundColor="Red"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewModel}}, Path=DeleteQuestionCommand}"
+                                    CommandParameter="{Binding .}"
+                                    Text="Delete" />
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*">
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Text="{Binding Question}" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                HorizontalOptions="Start"
+                                Text="{Binding AnswerOne}" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                HorizontalOptions="End"
+                                Text="{Binding AnswerTwo}" />
+                            <drawables:RatioGraphicsView
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                HeightRequest="20"
+                                HorizontalOptions="Fill"
+                                Value1="{Binding AnswerOneCount}"
+                                Value2="{Binding AnswerTwoCount}">
+                                <drawables:RatioGraphicsView.Drawable>
+                                    <drawables:RatioBarDrawable />
+                                </drawables:RatioGraphicsView.Drawable>
+                            </drawables:RatioGraphicsView>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Command="{Binding GoToSettingsCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
