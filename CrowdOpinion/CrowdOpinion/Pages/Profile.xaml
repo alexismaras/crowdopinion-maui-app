@@ -8,10 +8,12 @@
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
     Title="Profile"
     x:DataType="viewmodel:ProfileViewModel">
+
     <VerticalStackLayout Padding="20">
-        <CollectionView ItemsSource="{Binding Questions}">
+        <Button Command="{Binding GetQuestionsCommand}" Text="Reload My Questions" />
+        <CollectionView ItemsSource="{Binding QuestionObjects}">
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Type x:String}">
+                <DataTemplate x:DataType="model:QuestionObjectSupa">
                     <SwipeView>
                         <SwipeView.RightItems>
                             <SwipeItems>

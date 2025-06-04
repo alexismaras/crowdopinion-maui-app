@@ -3,28 +3,57 @@ using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using CrowdOpinion.Models;
 using CrowdOpinion.Pages;
+using CrowdOpinion.Services;
 
 namespace CrowdOpinion.ViewModels
 {
     // ProfileViewModel.cs
     public partial class ProfileViewModel : ObservableObject
     {
-        private readonly QuestionStore _questionStore;
 
-        [ObservableProperty]
-        private ObservableCollection<QuestionObject> _questions;
-        public ProfileViewModel(QuestionStore questionStore)
+        private readonly IDataService _dataService;
+
+        public ObservableCollection<QuestionObjectSupa> QuestionObjects { get; set; } = new();
+        public ProfileViewModel(IDataService dataService)
         {
-            _questionStore = questionStore;
-            Questions = _questionStore.Questions;
+            _dataService = dataService;
         }
 
-        //public ObservableCollection<QuestionObject> Questions => QuestionStore.Questions;
+        [RelayCommand]
+        public async Task GetQuestions()
+        {
+            QuestionObjects.Clear();
+
+            try
+            {
+                var questionObjectSupa = await _dataService.GetQuestionObject();
+
+                if (questionObjectSupa.Any())
+                {
+                    foreach (var question in questionObjectSupa)
+                    {
+                        QuestionObjects.Add(question);
+                        Console.WriteLine(question.Question);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", ex.Message, "OK");
+            }
+        }
 
         [RelayCommand]
-        void DeleteQuestion(QuestionObject questionObject)
+        public async Task DeleteQuestion(QuestionObjectSupa questionObjectSupa)
         {
-            _questionStore.RemoveQuestion(questionObject);
+            try
+            {
+                await _dataService.DeleteQuestionObject(questionObjectSupa.Id);
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", ex.Message, "OK");
+            }
         }
 
         [RelayCommand]
