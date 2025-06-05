@@ -4,59 +4,78 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:drawables="clr-namespace:CrowdOpinion.Drawables"
+    xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
     xmlns:model="clr-namespace:CrowdOpinion.Models"
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
     Title="Profile"
     x:DataType="viewmodel:ProfileViewModel">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding GoToSettingsCommand}" Text="Menu">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="MaterialRegular"
+                    Glyph="{x:Static m:MaterialRegular.Menu}"
+                    Size="24"
+                    Color="{AppThemeBinding Light=Black,
+                                            Dark=White}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <RefreshView
+        Command="{Binding RefreshCommand}"
+        IsRefreshing="{Binding IsRefreshing}"
+        RefreshColor="{StaticResource Primary}">
+        <StackLayout Padding="20" Spacing="20">
+            <Label Text="Username" />
+            <CollectionView ItemsSource="{Binding QuestionObjects}">
 
-    <VerticalStackLayout Padding="20">
-        <Button Command="{Binding GetQuestionsCommand}" Text="Reload My Questions" />
-        <CollectionView ItemsSource="{Binding QuestionObjects}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="model:QuestionObjectSupa">
-                    <SwipeView>
-                        <SwipeView.RightItems>
-                            <SwipeItems>
-                                <SwipeItem
-                                    BackgroundColor="Red"
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewModel}}, Path=DeleteQuestionCommand}"
-                                    CommandParameter="{Binding .}"
-                                    Text="Delete" />
-                            </SwipeItems>
-                        </SwipeView.RightItems>
-                        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*">
-                            <Label
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Grid.ColumnSpan="2"
-                                Text="{Binding Question}" />
-                            <Label
-                                Grid.Row="1"
-                                Grid.Column="0"
-                                HorizontalOptions="Start"
-                                Text="{Binding AnswerOne}" />
-                            <Label
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                HorizontalOptions="End"
-                                Text="{Binding AnswerTwo}" />
-                            <drawables:RatioGraphicsView
-                                Grid.Row="2"
-                                Grid.Column="0"
-                                Grid.ColumnSpan="2"
-                                HeightRequest="20"
-                                HorizontalOptions="Fill"
-                                Value1="{Binding AnswerOneCount}"
-                                Value2="{Binding AnswerTwoCount}">
-                                <drawables:RatioGraphicsView.Drawable>
-                                    <drawables:RatioBarDrawable />
-                                </drawables:RatioGraphicsView.Drawable>
-                            </drawables:RatioGraphicsView>
-                        </Grid>
-                    </SwipeView>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-        <Button Command="{Binding GoToSettingsCommand}" />
-    </VerticalStackLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:QuestionObjectSupa">
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem
+                                        BackgroundColor="Red"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewModel}}, Path=DeleteQuestionCommand}"
+                                        CommandParameter="{Binding .}"
+                                        Text="Delete" />
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*">
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    FontAttributes="Bold"
+                                    Text="{Binding Question}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    HorizontalOptions="Start"
+                                    Text="{Binding AnswerOne}" />
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    HorizontalOptions="End"
+                                    Text="{Binding AnswerTwo}" />
+                                <drawables:RatioGraphicsView
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    HeightRequest="20"
+                                    HorizontalOptions="Fill"
+                                    Value1="{Binding AnswerOneCount}"
+                                    Value2="{Binding AnswerTwoCount}">
+                                    <drawables:RatioGraphicsView.Drawable>
+                                        <drawables:RatioBarDrawable />
+                                    </drawables:RatioGraphicsView.Drawable>
+                                </drawables:RatioGraphicsView>
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </RefreshView>
+
 </ContentPage>

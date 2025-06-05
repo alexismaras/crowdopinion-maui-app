@@ -28,5 +28,8 @@ namespace CrowdOpinion.Models
         [Column("created_at", ignoreOnInsert: true)]
         public DateTime CreatedAt { get; set; }
 
+        [Column("user_id")]
+        public string UserId { get; set; }
+
     }
 }

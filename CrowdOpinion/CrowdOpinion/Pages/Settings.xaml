@@ -6,11 +6,15 @@
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
     Title="Settings"
     x:DataType="viewmodel:SettingsViewModel">
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="20" Spacing="20">
         <Label
             HorizontalOptions="Center"
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" />
         <Button Command="{Binding CloseSettingsCommand}" Text="Close" />
+        <Button
+            BackgroundColor="Red"
+            Command="{Binding LogOutNowCommand}"
+            Text="Sign Out" />
     </VerticalStackLayout>
 </ContentPage>

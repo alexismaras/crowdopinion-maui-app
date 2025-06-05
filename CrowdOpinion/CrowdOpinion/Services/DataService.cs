@@ -1,10 +1,13 @@
-﻿using Supabase;
-using CrowdOpinion.Models;
+﻿using CrowdOpinion.Models;
+using Microsoft.Maui.ApplicationModel.Communication;
+using Supabase;
+using Supabase.Interfaces;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace CrowdOpinion.Services
 {
     public class DataService : IDataService
     {
-        private readonly Client _supabaseClient;
+        public readonly Client _supabaseClient;
 
         public DataService(Supabase.Client supabaseClient)
         {
@@ -16,8 +19,33 @@ namespace CrowdOpinion.Services
             return response.Models.OrderByDescending(b => b.CreatedAt);
         }
 
+        public async Task<IEnumerable<QuestionObjectSupa>> GetUserQuestionObject()
+        {
+            var session = _supabaseClient.Auth.CurrentSession;
+
+            var user = await _supabaseClient.Auth.GetUser(session.AccessToken);
+            if (user == null) throw new UnauthorizedAccessException("User not authenticated");
+
+            // Filter by the user's UID
+            var response = await _supabaseClient
+                .From<QuestionObjectSupa>()
+                .Where(x => x.UserId == user.Id)  // Assuming your model has UserId property
+                .Get();
+
+            return response.Models.OrderByDescending(b => b.CreatedAt);
+        }
+
         public async Task CreateQuestionObject(QuestionObjectSupa questionObjectSupa)
         {
+            var session = _supabaseClient.Auth.CurrentSession;
+
+            var user = await _supabaseClient.Auth.GetUser(session.AccessToken);
+            if (user == null) throw new Exception("Not authenticated");
+
+            // Set the user_id
+            questionObjectSupa.UserId = user.Id;
+            Console.WriteLine(user.Id);
+
             await _supabaseClient.From<QuestionObjectSupa>().Insert(questionObjectSupa);
         }
 
@@ -35,7 +63,43 @@ namespace CrowdOpinion.Services
                 .Set(b => b.AnswerTwo, questionObjectSupa.AnswerTwo)
                 .Set(b => b.AnswerOneCount, questionObjectSupa.AnswerOneCount)
                 .Set(b => b.AnswerTwoCount, questionObjectSupa.AnswerTwoCount)
+                .Set(b => b.UserId, questionObjectSupa.UserId)
                 .Update();
         }
+
+        public async Task SignUp(string email, string password)
+        {
+            await _supabaseClient.Auth.SignUp(email, password);
+        }
+
+        public async Task SignIn(string email, string password)
+        {
+            await _supabaseClient.Auth.SignIn(email, password);
+        }
+
+        public async Task SignOut()
+        {
+            await _supabaseClient.Auth.SignOut();
+        }
+
+        public async Task<bool> IsUserLoggedIn()
+        {
+            try
+            {
+                // Check if we have a current session
+                var session = _supabaseClient.Auth.CurrentSession;
+                if (session == null) // || session.ExpiresAt < DateTime.Now)
+                    return false;
+
+                // Optionally verify with server
+                var user = await _supabaseClient.Auth.GetUser(session.AccessToken);
+                return user != null;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

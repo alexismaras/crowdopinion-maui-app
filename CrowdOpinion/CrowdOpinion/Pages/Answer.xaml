@@ -6,32 +6,41 @@
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
     Title="Answer"
     x:DataType="viewmodel:AnswerViewModel">
-    <Grid ColumnDefinitions="*,*" RowDefinitions="300,*,200">
-        <Label
-            Grid.Row="0"
-            Grid.ColumnSpan="2"
-            BackgroundColor="yellow"
-            SemanticProperties.HeadingLevel="Level1"
-            Style="{StaticResource Headline}"
-            Text="{Binding RandomQuestionObject.Question}"
-            TextColor="{AppThemeBinding Light=Black,
-                                        Dark=White}"
-            VerticalOptions="Center" />
-        <Button
-            Grid.Row="1"
-            Grid.Column="0"
-            BackgroundColor="red"
-            Command="{Binding ChooseAnswerOneCommand}"
-            Text="{Binding RandomQuestionObject.AnswerOne}"
-            TextColor="{AppThemeBinding Light=Black,
-                                        Dark=White}" />
-        <Button
-            Grid.Row="1"
-            Grid.Column="1"
-            BackgroundColor="blue"
-            Command="{Binding ChooseAnswerTwoCommand}"
-            Text="{Binding RandomQuestionObject.AnswerTwo}"
-            TextColor="{AppThemeBinding Light=Black,
-                                        Dark=White}" />
-    </Grid>
+
+    <RefreshView
+        Command="{Binding RefreshCommand}"
+        IsRefreshing="{Binding IsRefreshing}"
+        RefreshColor="{StaticResource Primary}">
+        <ScrollView Padding="20">
+            <Grid ColumnDefinitions="*,*" RowDefinitions="300,*,200">
+                <Label
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Style="{StaticResource Headline}"
+                    Text="{Binding RandomQuestionObject.Question}"
+                    TextColor="{AppThemeBinding Light=Black,
+                                                Dark=White}"
+                    VerticalOptions="Center" />
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    BackgroundColor="red"
+                    Command="{Binding ChooseAnswerOneCommand}"
+                    Text="{Binding RandomQuestionObject.AnswerOne}"
+                    TextColor="{AppThemeBinding Light=Black,
+                                                Dark=White}" />
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor="blue"
+                    Command="{Binding ChooseAnswerTwoCommand}"
+                    Text="{Binding RandomQuestionObject.AnswerTwo}"
+                    TextColor="{AppThemeBinding Light=Black,
+                                                Dark=White}" />
+            </Grid>
+
+        </ScrollView>
+    </RefreshView>
+
 </ContentPage>

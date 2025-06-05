@@ -7,10 +7,10 @@ using CrowdOpinion.Services;
 
 namespace CrowdOpinion.ViewModels
 {
-    // ProfileViewModel.cs
     public partial class ProfileViewModel : ObservableObject
     {
-
+        [ObservableProperty]
+        private bool _isRefreshing;
         private readonly IDataService _dataService;
 
         public ObservableCollection<QuestionObjectSupa> QuestionObjects { get; set; } = new();
@@ -20,13 +20,20 @@ namespace CrowdOpinion.ViewModels
         }
 
         [RelayCommand]
-        public async Task GetQuestions()
+        private async void Refresh()
         {
+            IsRefreshing = true;
+            await GetQuestions();
+            IsRefreshing = false;
+        }
+        private async Task GetQuestions()
+        {
+
             QuestionObjects.Clear();
 
             try
             {
-                var questionObjectSupa = await _dataService.GetQuestionObject();
+                var questionObjectSupa = await _dataService.GetUserQuestionObject();
 
                 if (questionObjectSupa.Any())
                 {
@@ -41,6 +48,7 @@ namespace CrowdOpinion.ViewModels
             {
                 await Shell.Current.DisplayAlert("Error", ex.Message, "OK");
             }
+
         }
 
         [RelayCommand]

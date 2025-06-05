@@ -1,40 +1,113 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CrowdOpinion.Models;
+using System.Collections.ObjectModel;
+using CrowdOpinion.Services;
 
 namespace CrowdOpinion.ViewModels
 {
     public partial class AnswerViewModel : ObservableObject
     {
-        private readonly QuestionStore _questionStore;
+        [ObservableProperty]
+        private bool _isRefreshing;
+
+        private readonly IDataService _dataService;
+        private Collection<QuestionObjectSupa> QuestionObjects { get; set; } = new();
 
         [ObservableProperty]
-        private QuestionObject _randomQuestionObject;
-        public AnswerViewModel(QuestionStore questionStore)
+        private QuestionObjectSupa _randomQuestionObject;
+        public AnswerViewModel(IDataService dataService)
         {
-            _questionStore = questionStore;
+            _dataService = dataService;
             RandomQuestionObject = GetRandomQuestion();
         }
-        private QuestionObject GetRandomQuestion()
+
+        [RelayCommand]
+        public async Task GetQuestions()
+        {
+            QuestionObjects.Clear();
+
+            try
+            {
+                var questionObjectSupa = await _dataService.GetQuestionObject();
+
+                if (questionObjectSupa.Any())
+                {
+                    foreach (var question in questionObjectSupa)
+                    {
+                        QuestionObjects.Add(question);
+                        Console.WriteLine(question.Question);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", ex.Message, "OK");
+            }
+        }
+
+        
+        private QuestionObjectSupa GetRandomQuestion()
         {
             var random = new Random();
-            if (_questionStore.Questions.Count <= 0) return new QuestionObject("Nothing", "Nothing", "Nothing", 0, 0);
-            int index = random.Next(0, _questionStore.Questions.Count);
-            return _questionStore.Questions[index];
+            if (QuestionObjects.Count <= 0) return new QuestionObjectSupa()
+            {
+                Question = "Foo",
+                AnswerOne = "Nothing",
+                AnswerTwo = "Nothing",
+                AnswerOneCount = 0,
+                AnswerTwoCount = 0
+            };
+
+            int index = random.Next(0, QuestionObjects.Count);
+            return QuestionObjects[index];
+        }
+
+        [RelayCommand]
+        async private void Refresh()
+        {
+            IsRefreshing = true;
+            await GetQuestions();
+            RandomQuestionObject = GetRandomQuestion();
+            IsRefreshing = false;
         }
 
         [RelayCommand]
         private void ChooseAnswerOne()
         {
-            _questionStore.AddAnswerVote(RandomQuestionObject, 1);
+            AddAnswerVote(RandomQuestionObject, 1);
             RandomQuestionObject = GetRandomQuestion();
         }
 
         [RelayCommand]
         private void ChooseAnswerTwo()
         {
-            _questionStore.AddAnswerVote(RandomQuestionObject, 2);
+            AddAnswerVote(RandomQuestionObject, 2);
             RandomQuestionObject = GetRandomQuestion();
+        }
+
+        async private void AddAnswerVote(QuestionObjectSupa questionToUpdate, int answer)
+        {
+            switch (answer)
+            {
+                case 1:
+                    questionToUpdate.AnswerOneCount++;
+                    break;
+                case 2:
+                    questionToUpdate.AnswerTwoCount++;
+                    break;
+                default:
+                    return;
+
+            };
+            try
+            {
+                await _dataService.UpdateQuestionObject(questionToUpdate);
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", ex.Message, "OK");
+            }
         }
     }
 }

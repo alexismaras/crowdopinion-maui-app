@@ -1,27 +1,50 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<TabbedPage
     x:Class="CrowdOpinion.Pages.Login"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
-    Title="Login"
     x:DataType="viewmodel:LoginViewModel">
-    <VerticalStackLayout VerticalOptions="Center">
-        <Entry
-            HorizontalOptions="Center"
-            Placeholder="Email"
-            VerticalOptions="Center"
-            WidthRequest="300" />
-        <Entry
-            HorizontalOptions="Center"
-            IsPassword="True"
-            Placeholder="Password"
-            VerticalOptions="Center"
-            WidthRequest="300" />
-        <Button
-            Command="{Binding LoginNowCommand}"
-            Text="Login"
-            WidthRequest="300" />
-
-    </VerticalStackLayout>
-</ContentPage>
+    <ContentPage Title="Login">
+        <VerticalStackLayout VerticalOptions="Center">
+            <Entry
+                HorizontalOptions="Center"
+                Placeholder="Email"
+                Text="{Binding LoginEmail}"
+                VerticalOptions="Center"
+                WidthRequest="300" />
+            <Entry
+                HorizontalOptions="Center"
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding LoginPassword}"
+                VerticalOptions="Center"
+                WidthRequest="300" />
+            <Button
+                Command="{Binding LoginNowCommand}"
+                Text="Login"
+                WidthRequest="300" />
+        </VerticalStackLayout>
+    </ContentPage>
+    <ContentPage Title="Register">
+        <VerticalStackLayout VerticalOptions="Center">
+            <Entry
+                HorizontalOptions="Center"
+                Placeholder="Email"
+                Text="{Binding RegisterEmail}"
+                VerticalOptions="Center"
+                WidthRequest="300" />
+            <Entry
+                HorizontalOptions="Center"
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding RegisterPassword}"
+                VerticalOptions="Center"
+                WidthRequest="300" />
+            <Button
+                Command="{Binding RegisterNowCommand}"
+                Text="Register"
+                WidthRequest="300" />
+        </VerticalStackLayout>
+    </ContentPage>
+</TabbedPage>

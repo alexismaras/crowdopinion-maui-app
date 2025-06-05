@@ -6,7 +6,10 @@
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
     Title="Ask"
     x:DataType="viewmodel:AskViewModel">
-    <Grid ColumnDefinitions="*" RowDefinitions="*,100,50,50,50,50,50,*">
+    <Grid
+        Padding="20"
+        ColumnDefinitions="*"
+        RowDefinitions="*,100,50,50,50,50,50,*">
         <Label
             Grid.Row="1"
             HorizontalOptions="Center"

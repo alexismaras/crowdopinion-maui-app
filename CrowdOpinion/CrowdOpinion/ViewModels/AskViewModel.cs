@@ -57,13 +57,6 @@ namespace CrowdOpinion.ViewModels
             }
 
         }
-        //private void AskQuestion()
-        //{
-        //    _questionStore.AddQuestion(QuestionText, AnswerOneText, AnswerTwoText);
-        //    QuestionText = string.Empty;
-        //    AnswerOneText = string.Empty;
-        //    AnswerTwoText = string.Empty;
-        //}
     }
 }
 
