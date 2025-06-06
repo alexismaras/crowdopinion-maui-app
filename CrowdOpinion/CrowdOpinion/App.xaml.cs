@@ -2,6 +2,7 @@
 using CrowdOpinion.Pages;
 using CrowdOpinion.ViewModels;
 using CrowdOpinion.Services;
+
 namespace CrowdOpinion
 {
     public partial class App : Application
@@ -34,6 +35,7 @@ namespace CrowdOpinion
                 return new Window(new Login(_loginViewModel));
             }
         }
+
 
         private void HandleLoginSucceeded()
         {

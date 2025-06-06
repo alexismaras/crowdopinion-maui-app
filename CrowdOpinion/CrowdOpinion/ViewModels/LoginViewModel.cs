@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using CrowdOpinion.Services;
 using Microsoft.Maui.Controls.Platform;
+using System.Threading.Channels;
 
 namespace CrowdOpinion.ViewModels
 {

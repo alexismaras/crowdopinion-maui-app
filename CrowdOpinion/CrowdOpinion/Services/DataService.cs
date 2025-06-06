@@ -1,14 +1,15 @@
 ﻿using CrowdOpinion.Models;
+using CrowdOpinion.ViewModels;
 using Microsoft.Maui.ApplicationModel.Communication;
 using Supabase;
-using Supabase.Interfaces;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.Maui.Storage;
+
 namespace CrowdOpinion.Services
 {
     public class DataService : IDataService
     {
-        public readonly Client _supabaseClient;
-
+        public readonly Supabase.Client _supabaseClient;
+        
         public DataService(Supabase.Client supabaseClient)
         {
             _supabaseClient = supabaseClient;
@@ -35,8 +36,14 @@ namespace CrowdOpinion.Services
             return response.Models.OrderByDescending(b => b.CreatedAt);
         }
 
-        public async Task CreateQuestionObject(QuestionObjectSupa questionObjectSupa)
+        public async Task CreateQuestionObject(
+            QuestionObjectSupa questionObjectSupa,
+            string imageOneUrl,
+            string imageTwoUrl)
         {
+            var imgPath = "Resources/Images/dotnet_bot.png";
+            await _supabaseClient.Storage.From("images").Upload(imageOneUrl, "av.png");
+
             var session = _supabaseClient.Auth.CurrentSession;
 
             var user = await _supabaseClient.Auth.GetUser(session.AccessToken);
@@ -69,12 +76,14 @@ namespace CrowdOpinion.Services
 
         public async Task SignUp(string email, string password)
         {
-            await _supabaseClient.Auth.SignUp(email, password);
+            var user = await _supabaseClient.Auth.SignUp(email, password);
         }
 
         public async Task SignIn(string email, string password)
         {
-            await _supabaseClient.Auth.SignIn(email, password);
+            var session = await _supabaseClient.Auth.SignIn(email, password);
+            await SecureStorage.SetAsync("supabase_refresh_token", session.RefreshToken);
+            await SecureStorage.SetAsync("supabase_access_token", session.AccessToken);
         }
 
         public async Task SignOut()
@@ -89,7 +98,7 @@ namespace CrowdOpinion.Services
                 // Check if we have a current session
                 var session = _supabaseClient.Auth.CurrentSession;
                 if (session == null) // || session.ExpiresAt < DateTime.Now)
-                    return false;
+                return false;
 
                 // Optionally verify with server
                 var user = await _supabaseClient.Auth.GetUser(session.AccessToken);
@@ -100,6 +109,7 @@ namespace CrowdOpinion.Services
                 return false;
             }
         }
+
 
     }
 }

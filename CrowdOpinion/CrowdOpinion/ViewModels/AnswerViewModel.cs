@@ -19,7 +19,7 @@ namespace CrowdOpinion.ViewModels
         public AnswerViewModel(IDataService dataService)
         {
             _dataService = dataService;
-            RandomQuestionObject = GetRandomQuestion();
+            Refresh();
         }
 
         [RelayCommand]

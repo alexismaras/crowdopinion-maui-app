@@ -27,8 +27,10 @@
         RefreshColor="{StaticResource Primary}">
         <StackLayout Padding="20" Spacing="20">
             <Label Text="Username" />
-            <CollectionView ItemsSource="{Binding QuestionObjects}">
-
+            <CollectionView Header="My Questions" ItemsSource="{Binding QuestionObjects}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="20" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:QuestionObjectSupa">
                         <SwipeView>
@@ -62,12 +64,12 @@
                                     Grid.Row="2"
                                     Grid.Column="0"
                                     Grid.ColumnSpan="2"
-                                    HeightRequest="20"
+                                    HeightRequest="30"
                                     HorizontalOptions="Fill"
                                     Value1="{Binding AnswerOneCount}"
                                     Value2="{Binding AnswerTwoCount}">
                                     <drawables:RatioGraphicsView.Drawable>
-                                        <drawables:RatioBarDrawable />
+                                        <drawables:RatioBarDrawable CornerRadius="5" />
                                     </drawables:RatioGraphicsView.Drawable>
                                 </drawables:RatioGraphicsView>
                             </Grid>

@@ -19,6 +19,12 @@ namespace CrowdOpinion.Models
         [Column("answer_two")]
         public string AnswerTwo { get; set; }
 
+        [Column("answer_two_img_url")]
+        public string AnswerOneImgUrl { get; set; }
+
+        [Column("answer_one_img_url")]
+        public string AnswerTwoImgUrl { get; set; }
+
         [Column("answer_one_count")]
         public int AnswerOneCount { get; set; }
 

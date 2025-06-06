@@ -6,7 +6,9 @@ namespace CrowdOpinion.Services
         Task<bool> IsUserLoggedIn();
         Task<IEnumerable<QuestionObjectSupa>> GetQuestionObject();
         Task<IEnumerable<QuestionObjectSupa>> GetUserQuestionObject();
-        Task CreateQuestionObject(QuestionObjectSupa questionObjectSupa);
+        Task CreateQuestionObject(QuestionObjectSupa questionObjectSupa,
+            string imageOneUrl,
+            string imageTwoUrl);
         Task DeleteQuestionObject(int id);
         Task UpdateQuestionObject(QuestionObjectSupa questionObjectSupa);
         Task SignUp(string email, string password);

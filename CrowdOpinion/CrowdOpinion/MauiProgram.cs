@@ -25,6 +25,7 @@ namespace CrowdOpinion
             // Configure Supabase
             var url = AppConfig.SUPABASE_URL;
             var key = AppConfig.SUPABASE_KEY;
+
             builder.Services.AddSingleton(provider => new Supabase.Client(url, key));
 
             builder.Services.AddSingleton<QuestionStore>();
