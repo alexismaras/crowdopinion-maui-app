@@ -12,7 +12,7 @@
         IsRefreshing="{Binding IsRefreshing}"
         RefreshColor="{StaticResource Primary}">
         <ScrollView Padding="20">
-            <Grid ColumnDefinitions="*,*" RowDefinitions="300,*,200">
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*">
                 <Label
                     Grid.Row="0"
                     Grid.ColumnSpan="2"
@@ -38,6 +38,15 @@
                     Text="{Binding RandomQuestionObject.AnswerTwo}"
                     TextColor="{AppThemeBinding Light=Black,
                                                 Dark=White}" />
+
+                <Image
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Source="dotnet_bot.png" />
+                <Image
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Source="dotnet_bot.png" />
             </Grid>
 
         </ScrollView>

@@ -41,17 +41,26 @@ namespace CrowdOpinion.Services
             string imageOneUrl,
             string imageTwoUrl)
         {
-            var imgPath = "Resources/Images/dotnet_bot.png";
-            await _supabaseClient.Storage.From("images").Upload(imageOneUrl, "av.png");
 
             var session = _supabaseClient.Auth.CurrentSession;
 
             var user = await _supabaseClient.Auth.GetUser(session.AccessToken);
             if (user == null) throw new Exception("Not authenticated");
 
+            Guid myuuidOne = Guid.NewGuid();
+            string myuuidOneString = user.Id + "/" + myuuidOne.ToString();
+
+            Guid myuuidTwo = Guid.NewGuid();
+            string myuuidTwoString = user.Id + "/" + myuuidTwo.ToString();
+
+
+            await _supabaseClient.Storage.From("images").Upload(imageOneUrl, myuuidOneString);
+            await _supabaseClient.Storage.From("images").Upload(imageTwoUrl, myuuidTwoString);
+
             // Set the user_id
             questionObjectSupa.UserId = user.Id;
-            Console.WriteLine(user.Id);
+            questionObjectSupa.AnswerOneImgUrl = myuuidOneString;
+            questionObjectSupa.AnswerTwoImgUrl = myuuidTwoString;
 
             await _supabaseClient.From<QuestionObjectSupa>().Insert(questionObjectSupa);
         }
