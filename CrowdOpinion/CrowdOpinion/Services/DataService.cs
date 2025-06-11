@@ -143,7 +143,13 @@ namespace CrowdOpinion.Services
                 {
                     return AuthResult.Failure("Authentication failed");
                 }
-                
+
+                ProfileObject currentUserProfile = await GetUserProfileByUuid(session.User.Id);
+
+                Preferences.Default.Set("username", currentUserProfile.UserName);
+                Preferences.Default.Set("full_name", currentUserProfile.FullName);
+                Preferences.Default.Set("avatar_url", currentUserProfile.AvatarUrl);
+
                 await SecureStorage.Default.SetAsync("session_refresh_token", session.RefreshToken);
                 await SecureStorage.Default.SetAsync("session_access_token", session.AccessToken);
 

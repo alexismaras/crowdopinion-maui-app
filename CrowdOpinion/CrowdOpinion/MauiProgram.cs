@@ -5,6 +5,7 @@ using CrowdOpinion.Services;
 using CrowdOpinion.ViewModels;
 using Microsoft.Extensions.Logging;
 using Supabase;
+using Syncfusion.Maui.Core.Hosting;
 using UraniumUI;
 
 namespace CrowdOpinion
@@ -16,6 +17,7 @@ namespace CrowdOpinion
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .ConfigureSyncfusionCore()
                 .UseMauiCommunityToolkit()
                 .UseUraniumUI()
                 .UseUraniumUIMaterial()

@@ -6,6 +6,7 @@
     xmlns:drawables="clr-namespace:CrowdOpinion.Drawables"
     xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
     xmlns:model="clr-namespace:CrowdOpinion.Models"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
     Title="Profile"
     x:DataType="viewmodel:ProfileViewModel">
@@ -25,10 +26,51 @@
         Command="{Binding RefreshCommand}"
         IsRefreshing="{Binding IsRefreshing}"
         RefreshColor="{StaticResource Primary}">
-        <Grid RowDefinitions="Auto,*">
-            <Label Grid.Row="0" Text="Username" />
+        <Grid
+            Padding="20,0,20,0"
+            RowDefinitions="Auto,*"
+            RowSpacing="10">
+            <Border StrokeShape="RoundRectangle 6,6,6,6" StrokeThickness="0">
+                <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                    <!--
+                        Image
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Aspect="AspectFill"
+                        BackgroundColor="Black"
+                        HeightRequest="60"
+                        Source="{Binding MyAvatarUrl, StringFormat='https://kecjwzwulktcrykauczv.supabase.co/storage/v1/object/public/avatars/{0}'}" /
+                    -->
+                    <Image
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        Aspect="AspectFill"
+                        BackgroundColor="Black"
+                        HeightRequest="60"
+                        Source="https://frutiger-aero.org/img/frutiger-aero-1.webp" />
+                    <Border
+                        Grid.Row="0"
+                        Grid.RowSpan="2"
+                        BackgroundColor="Black"
+                        Opacity="0.75"
+                        StrokeThickness="0" />
+                    <Label
+                        Grid.Row="0"
+                        Padding="10,10,0,0"
+                        HorizontalOptions="Start"
+                        Text="{Binding MyUserName}" />
+                    <Label
+                        Grid.Row="1"
+                        Padding="10,0,0,10"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start"
+                        Text="{Binding MyFullName}" />
+
+                </Grid>
+            </Border>
             <CollectionView
                 Grid.Row="1"
+                Header="My Questions"
                 ItemsSource="{Binding QuestionObjects}"
                 VerticalScrollBarVisibility="Always">
                 <CollectionView.ItemsLayout>
@@ -55,7 +97,7 @@
                                 </SwipeItems>
                             </SwipeView.RightItems>
                             <Grid
-                                Padding="20,5,20,5"
+                                Padding="0,5,0,5"
                                 BackgroundColor="{StaticResource OffBlack}"
                                 ColumnDefinitions="*,*"
                                 RowDefinitions="*,*,*">

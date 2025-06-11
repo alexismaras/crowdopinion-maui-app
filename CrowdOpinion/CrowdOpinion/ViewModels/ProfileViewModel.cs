@@ -11,6 +11,16 @@ namespace CrowdOpinion.ViewModels
     {
         [ObservableProperty]
         private bool _isRefreshing;
+
+        [ObservableProperty]
+        private string _myUserName;
+
+        [ObservableProperty]
+        private string _myFullName;
+
+        [ObservableProperty]
+        private string _myAvatarUrl;
+
         private readonly IDataService _dataService;
 
         public ObservableCollection<QuestionObjectSupa> QuestionObjects { get; set; } = new();
@@ -25,6 +35,9 @@ namespace CrowdOpinion.ViewModels
         {
             IsRefreshing = true;
             await GetQuestions();
+            MyUserName = Preferences.Default.Get("username", "_");
+            MyFullName = Preferences.Default.Get("full_name", "_");
+            MyAvatarUrl = Preferences.Default.Get("avatar_url", "_");
             IsRefreshing = false;
         }
         private async Task GetQuestions()

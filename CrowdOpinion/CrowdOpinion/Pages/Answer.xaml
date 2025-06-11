@@ -22,37 +22,59 @@
                     Spacing="20"
                     VerticalOptions="Center">
 
-                    <Border Padding="10" StrokeShape="RoundRectangle 6,6,6,6">
-                        <Grid>
-                            <Image Source="{Binding QuestionAuthorProfile.AvatarUrl, StringFormat='https://kecjwzwulktcrykauczv.supabase.co/storage/v1/object/public/avatars/{0}'}" WidthRequest="50" />
-                            <Label Grid.Column="1" Text="{Binding QuestionAuthorProfile.UserName}" />
+                    <Border StrokeShape="RoundRectangle 6,6,6,6" StrokeThickness="0">
+                        <Grid ColumnDefinitions="*" RowDefinitions="*,*">
+                            <!--
+                                Image
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"
+                                BackgroundColor="Black"
+                                HeightRequest="60"
+                                Source="{Binding QuestionAuthorProfile.AvatarUrl, StringFormat='https://kecjwzwulktcrykauczv.supabase.co/storage/v1/object/public/avatars/{0}'}" /
+                            -->
+                            <Image
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Aspect="AspectFill"
+                                BackgroundColor="Black"
+                                HeightRequest="60"
+                                Source="https://frutiger-aero.org/img/frutiger-aero-1.webp" />
+                            <Border
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                BackgroundColor="Black"
+                                Opacity="0.75"
+                                StrokeThickness="0" />
+                            <Label
+                                Grid.Row="0"
+                                Padding="10,10,0,0"
+                                HorizontalOptions="Start"
+                                Text="{Binding QuestionAuthorProfile.UserName}" />
+                            <Label
+                                Grid.Row="1"
+                                Padding="10,0,0,10"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                Text="{Binding QuestionAuthorProfile.FullName}" />
+
                         </Grid>
                     </Border>
 
                     <Grid
                         Grid.Row="1"
-                        ColumnDefinitions="*,*"
-                        ColumnSpacing="10"
-                        RowDefinitions="*,300"
+                        RowDefinitions="200,*,200"
                         RowSpacing="10"
                         VerticalOptions="End">
 
 
-                        <Label
-                            Grid.Row="0"
-                            Grid.ColumnSpan="2"
-                            SemanticProperties.HeadingLevel="Level1"
-                            Style="{StaticResource SubHeadline}"
-                            Text="{Binding RandomQuestionObject.Question}"
-                            TextColor="{AppThemeBinding Light=Black,
-                                                        Dark=White}"
-                            VerticalOptions="Center" />
+
                         <Border
-                            Grid.Row="1"
+                            Grid.Row="0"
                             Grid.Column="0"
                             Stroke="LightGray"
                             StrokeShape="RoundRectangle 8,8,8,8"
-                            StrokeThickness="1">
+                            StrokeThickness="0">
                             <Border.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding ChooseAnswerOneCommand}" />
                             </Border.GestureRecognizers>
@@ -61,6 +83,11 @@
                                     Grid.Row="0"
                                     Aspect="AspectFill"
                                     Source="{Binding RandomQuestionObject.AnswerOneImgUrl, StringFormat='https://kecjwzwulktcrykauczv.supabase.co/storage/v1/object/public/images/{0}'}" />
+                                <Border
+                                    Grid.Row="0"
+                                    BackgroundColor="Black"
+                                    Opacity="0.3"
+                                    StrokeThickness="0" />
                                 <Label
                                     Grid.Row="0"
                                     FontAttributes="Bold"
@@ -78,13 +105,22 @@
                                 </Label>
                             </Grid>
                         </Border>
-
-                        <Border
+                        <Label
                             Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding RandomQuestionObject.Question}"
+                            TextColor="{AppThemeBinding Light=Black,
+                                                        Dark=White}"
+                            VerticalOptions="Center" />
+                        <Border
+                            Grid.Row="2"
                             Grid.Column="1"
                             Stroke="LightGray"
                             StrokeShape="RoundRectangle 8,8,8,8"
-                            StrokeThickness="1">
+                            StrokeThickness="0">
                             <Border.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding ChooseAnswerTwoCommand}" />
                             </Border.GestureRecognizers>
@@ -93,6 +129,11 @@
                                     Grid.Row="0"
                                     Aspect="AspectFill"
                                     Source="{Binding RandomQuestionObject.AnswerTwoImgUrl, StringFormat='https://kecjwzwulktcrykauczv.supabase.co/storage/v1/object/public/images/{0}'}" />
+                                <Border
+                                    Grid.Row="0"
+                                    BackgroundColor="Black"
+                                    Opacity="0.3"
+                                    StrokeThickness="0" />
                                 <Label
                                     Grid.Row="0"
                                     FontAttributes="Bold"
