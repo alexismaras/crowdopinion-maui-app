@@ -3,19 +3,22 @@
     x:Class="CrowdOpinion.Pages.Ask"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
     Title="Ask"
     x:DataType="viewmodel:AskViewModel">
     <Grid
         Padding="20"
         ColumnDefinitions="*,*"
-        RowDefinitions="*,100,50,50,50,50,50,*">
+        ColumnSpacing="10"
+        RowDefinitions="50,50,50,50,*,50"
+        RowSpacing="10">
         <Label
             Grid.Row="0"
             Grid.ColumnSpan="2"
             HorizontalOptions="Center"
             SemanticProperties.HeadingLevel="Level1"
-            Style="{StaticResource Headline}"
+            Style="{StaticResource SubHeadline}"
             Text="Ask your Question"
             VerticalOptions="Center" />
         <Entry
@@ -33,24 +36,72 @@
             Grid.ColumnSpan="2"
             Placeholder="Answer 2"
             Text="{Binding AnswerTwoText}" />
-        <Switch Grid.Row="5" Grid.ColumnSpan="2" />
+        <Border
+            Grid.Row="4"
+            Grid.Column="0"
+            Stroke="LightGray"
+            StrokeShape="RoundRectangle 8,8,8,8"
+            StrokeThickness="1">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding FrameOneTappedCommand}" />
+            </Border.GestureRecognizers>
+            <Image Aspect="AspectFill" Source="{Binding AnswerOneImage}">
+                <Image.Triggers>
+                    <DataTrigger
+                        Binding="{Binding AnswerOneImage}"
+                        TargetType="Image"
+                        Value="{x:Null}">
+                        <Setter Property="Source">
+                            <Setter.Value>
+                                <FontImageSource
+                                    FontAutoScalingEnabled="False"
+                                    FontFamily="MaterialRegular"
+                                    Glyph="{x:Static m:MaterialRegular.Add}"
+                                    Size="1"
+                                    Color="{AppThemeBinding Light=Black,
+                                                            Dark=White}" />
+                            </Setter.Value>
+                        </Setter>
+                    </DataTrigger>
+                </Image.Triggers>
+            </Image>
+        </Border>
+
+        <Border
+            Grid.Row="4"
+            Grid.Column="1"
+            Stroke="LightGray"
+            StrokeShape="RoundRectangle 8,8,8,8"
+            StrokeThickness="1">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding FrameTwoTappedCommand}" />
+            </Border.GestureRecognizers>
+            <Image Aspect="AspectFill" Source="{Binding AnswerTwoImage}">
+                <Image.Triggers>
+                    <DataTrigger
+                        Binding="{Binding AnswerTwoImage}"
+                        TargetType="Image"
+                        Value="{x:Null}">
+                        <Setter Property="Source">
+                            <Setter.Value>
+                                <FontImageSource
+                                    FontFamily="MaterialRegular"
+                                    Glyph="{x:Static m:MaterialRegular.Add}"
+                                    Color="{AppThemeBinding Light=Black,
+                                                            Dark=White}" />
+                            </Setter.Value>
+                        </Setter>
+                    </DataTrigger>
+                </Image.Triggers>
+            </Image>
+        </Border>
         <Button
-            Grid.Row="6"
+            Grid.Row="5"
             Grid.ColumnSpan="2"
             Command="{Binding AskQuestionCommand}"
+            CornerRadius="100"
+            HorizontalOptions="End"
             Text="Send"
-            WidthRequest="100" />
-        <ImageButton
-            Grid.Row="7"
-            Grid.Column="0"
-            Command="{Binding PickImageOneCommand}"
-            Source="{Binding AnswerOneImage}"
-            WidthRequest="100" />
-        <ImageButton
-            Grid.Row="7"
-            Grid.Column="1"
-            Command="{Binding PickImageTwoCommand}"
-            Source="{Binding AnswerTwoImage}"
-            WidthRequest="100" />
+            WidthRequest="75" />
     </Grid>
 </ContentPage>

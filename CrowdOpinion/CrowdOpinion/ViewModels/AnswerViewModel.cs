@@ -16,6 +16,10 @@ namespace CrowdOpinion.ViewModels
 
         [ObservableProperty]
         private QuestionObjectSupa _randomQuestionObject;
+
+        [ObservableProperty]
+        private ProfileObject _questionAuthorProfile;
+
         public AnswerViewModel(IDataService dataService)
         {
             _dataService = dataService;
@@ -29,7 +33,7 @@ namespace CrowdOpinion.ViewModels
 
             try
             {
-                var questionObjectSupa = await _dataService.GetQuestionObject();
+                var questionObjectSupa = await _dataService.GetForeignQuestionObject();
 
                 if (questionObjectSupa.Any())
                 {
@@ -50,43 +54,49 @@ namespace CrowdOpinion.ViewModels
         private QuestionObjectSupa GetRandomQuestion()
         {
             var random = new Random();
-            if (QuestionObjects.Count <= 0) return new QuestionObjectSupa()
-            {
-                Question = "Foo",
-                AnswerOne = "Nothing",
-                AnswerTwo = "Nothing",
-                AnswerOneCount = 0,
-                AnswerTwoCount = 0
-            };
+            if (QuestionObjects.Count <= 0) return null;
 
             int index = random.Next(0, QuestionObjects.Count);
-            return QuestionObjects[index];
+
+            QuestionObjectSupa newRandomQuestionObject = QuestionObjects[index];
+
+            return newRandomQuestionObject;
+        }
+
+        private async Task NewQuestion()
+        {
+            QuestionObjects.Remove(RandomQuestionObject);
+            RandomQuestionObject = GetRandomQuestion();
+            if (RandomQuestionObject == null) return;
+            QuestionAuthorProfile = await _dataService.GetUserProfileByUuid(RandomQuestionObject.UserId);
         }
 
         [RelayCommand]
-        async private void Refresh()
+        private async Task Refresh()
         {
             IsRefreshing = true;
             await GetQuestions();
-            RandomQuestionObject = GetRandomQuestion();
+            await NewQuestion();
             IsRefreshing = false;
         }
 
         [RelayCommand]
-        private void ChooseAnswerOne()
+        private async Task ChooseAnswerOne()
         {
-            AddAnswerVote(RandomQuestionObject, 1);
-            RandomQuestionObject = GetRandomQuestion();
+            await AddAnswerVote(RandomQuestionObject, 1);
+
+            await NewQuestion();
         }
 
         [RelayCommand]
-        private void ChooseAnswerTwo()
+        private async Task ChooseAnswerTwo()
         {
-            AddAnswerVote(RandomQuestionObject, 2);
-            RandomQuestionObject = GetRandomQuestion();
+            await AddAnswerVote(RandomQuestionObject, 2);
+
+            await NewQuestion();
         }
 
-        async private void AddAnswerVote(QuestionObjectSupa questionToUpdate, int answer)
+        private async Task AddAnswerVote(QuestionObjectSupa questionToUpdate, int answer)
         {
             switch (answer)
             {

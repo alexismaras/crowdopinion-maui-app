@@ -3,48 +3,93 @@
     x:Class="CrowdOpinion.Pages.Login"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
     x:DataType="viewmodel:LoginViewModel">
     <ContentPage Title="Login">
-        <VerticalStackLayout VerticalOptions="Center">
+        <Grid
+            Padding="40"
+            ColumnDefinitions="*"
+            RowDefinitions="*,*,*,*"
+            RowSpacing="10"
+            VerticalOptions="Center">
+
             <Entry
-                HorizontalOptions="Center"
+                Grid.Row="0"
                 Placeholder="Email"
-                Text="{Binding LoginEmail}"
-                VerticalOptions="Center"
-                WidthRequest="300" />
+                Text="{Binding LoginEmail}" />
             <Entry
-                HorizontalOptions="Center"
+                Grid.Row="1"
                 IsPassword="True"
                 Placeholder="Password"
-                Text="{Binding LoginPassword}"
-                VerticalOptions="Center"
-                WidthRequest="300" />
+                Text="{Binding LoginPassword}" />
             <Button
+                Grid.Row="2"
                 Command="{Binding LoginNowCommand}"
+                IsEnabled="False"
                 Text="Login"
-                WidthRequest="300" />
-        </VerticalStackLayout>
+                WidthRequest="100">
+                <Button.Triggers>
+                    <MultiTrigger TargetType="Button">
+                        <MultiTrigger.Conditions>
+
+
+                            <BindingCondition Binding="{Binding LoginEmail, Converter={toolkit:IsStringNotNullOrEmptyConverter}}" Value="True" />
+                            <BindingCondition Binding="{Binding LoginPassword, Converter={toolkit:IsStringNotNullOrEmptyConverter}}" Value="True" />
+                        </MultiTrigger.Conditions>
+                        <Setter Property="IsEnabled" Value="True" />
+                    </MultiTrigger>
+                </Button.Triggers>
+            </Button>
+        </Grid>
     </ContentPage>
     <ContentPage Title="Register">
-        <VerticalStackLayout VerticalOptions="Center">
+        <Grid
+            Padding="40"
+            ColumnDefinitions="*"
+            RowDefinitions="*,*,*,*,*,*"
+            RowSpacing="10"
+            VerticalOptions="Center">
             <Entry
-                HorizontalOptions="Center"
+                Grid.Row="0"
+                IsPassword="True"
+                Placeholder="Username"
+                Text="{Binding ProfileUserName}" />
+            <Entry
+                Grid.Row="1"
+                IsPassword="True"
+                Placeholder="Name"
+                Text="{Binding ProfileFullName}" />
+            <Entry
+                x:Name="RegisterEmailEntry"
+                Grid.Row="2"
                 Placeholder="Email"
-                Text="{Binding RegisterEmail}"
-                VerticalOptions="Center"
-                WidthRequest="300" />
+                Text="{Binding RegisterEmail}" />
             <Entry
-                HorizontalOptions="Center"
+                x:Name="RegisterPasswordEntry"
+                Grid.Row="3"
                 IsPassword="True"
                 Placeholder="Password"
-                Text="{Binding RegisterPassword}"
-                VerticalOptions="Center"
-                WidthRequest="300" />
+                Text="{Binding RegisterPassword}" />
             <Button
+                Grid.Row="4"
                 Command="{Binding RegisterNowCommand}"
+                IsEnabled="False"
                 Text="Register"
-                WidthRequest="300" />
-        </VerticalStackLayout>
+                WidthRequest="100">
+                <Button.Triggers>
+                    <MultiTrigger TargetType="Button">
+                        <MultiTrigger.Conditions>
+                            <BindingCondition Binding="{Binding ProfileUserName, Converter={toolkit:IsStringNotNullOrEmptyConverter}}" Value="True" />
+                            <BindingCondition Binding="{Binding ProfileFullName, Converter={toolkit:IsStringNotNullOrEmptyConverter}}" Value="True" />
+                            <BindingCondition Binding="{Binding RegisterEmail, Converter={toolkit:IsStringNotNullOrEmptyConverter}}" Value="True" />
+                            <BindingCondition Binding="{Binding RegisterPassword, Converter={toolkit:IsStringNotNullOrEmptyConverter}}" Value="True" />
+                        </MultiTrigger.Conditions>
+                        <Setter Property="IsEnabled" Value="True" />
+                    </MultiTrigger>
+                </Button.Triggers>
+            </Button>
+        </Grid>
+
     </ContentPage>
 </TabbedPage>

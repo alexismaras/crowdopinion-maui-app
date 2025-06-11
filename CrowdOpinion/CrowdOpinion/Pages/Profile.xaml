@@ -25,25 +25,40 @@
         Command="{Binding RefreshCommand}"
         IsRefreshing="{Binding IsRefreshing}"
         RefreshColor="{StaticResource Primary}">
-        <StackLayout Padding="20" Spacing="20">
-            <Label Text="Username" />
-            <CollectionView Header="My Questions" ItemsSource="{Binding QuestionObjects}">
+        <Grid RowDefinitions="Auto,*">
+            <Label Grid.Row="0" Text="Username" />
+            <CollectionView
+                Grid.Row="1"
+                ItemsSource="{Binding QuestionObjects}"
+                VerticalScrollBarVisibility="Always">
                 <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="20" Orientation="Vertical" />
+                    <LinearItemsLayout ItemSpacing="2" Orientation="Vertical" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:QuestionObjectSupa">
                         <SwipeView>
                             <SwipeView.RightItems>
-                                <SwipeItems>
+                                <SwipeItems SwipeBehaviorOnInvoked="Close">
                                     <SwipeItem
-                                        BackgroundColor="Red"
+                                        BackgroundColor="#ff4444"
                                         Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewModel}}, Path=DeleteQuestionCommand}"
                                         CommandParameter="{Binding .}"
-                                        Text="Delete" />
+                                        IsDestructive="False">
+                                        <SwipeItem.IconImageSource>
+                                            <FontImageSource
+                                                FontFamily="MaterialRegular"
+                                                Glyph="{x:Static m:MaterialRegular.Delete_outline}"
+                                                Color="{AppThemeBinding Light=Black,
+                                                                        Dark=White}" />
+                                        </SwipeItem.IconImageSource>
+                                    </SwipeItem>
                                 </SwipeItems>
                             </SwipeView.RightItems>
-                            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*">
+                            <Grid
+                                Padding="20,5,20,5"
+                                BackgroundColor="{StaticResource OffBlack}"
+                                ColumnDefinitions="*,*"
+                                RowDefinitions="*,*,*">
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="0"
@@ -77,7 +92,7 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </StackLayout>
+        </Grid>
     </RefreshView>
 
 </ContentPage>

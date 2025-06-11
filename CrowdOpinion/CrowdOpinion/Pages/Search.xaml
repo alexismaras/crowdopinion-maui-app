@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CrowdOpinion.Pages.Search"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:m="clr-namespace:UraniumUI.Icons.MaterialIcons;assembly=UraniumUI.Icons.MaterialIcons"
+    xmlns:model="clr-namespace:CrowdOpinion.Models"
+    xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
+    Title="Search"
+    x:DataType="viewmodel:SearchViewModel">
+    <VerticalStackLayout>
+        <Grid
+            Padding="20"
+            ColumnDefinitions=".8*,.2*"
+            RowDefinitions="*">
+            <Entry Grid.Column="0" Text="{Binding SearchString}" />
+            <Button
+                Grid.Column="1"
+                Command="{Binding SearchUsersCommand}"
+                Text="Search" />
+        </Grid>
+        <CollectionView
+            Grid.Row="1"
+            ItemsSource="{Binding SearchProfileObjects}"
+            VerticalScrollBarVisibility="Always">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout ItemSpacing="2" Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:ProfileObject">
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems SwipeBehaviorOnInvoked="Close">
+                                <SwipeItem
+                                    BackgroundColor="#ff4444"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:ProfileViewModel}}, Path=DeleteQuestionCommand}"
+                                    CommandParameter="{Binding .}"
+                                    IsDestructive="False">
+                                    <SwipeItem.IconImageSource>
+                                        <FontImageSource
+                                            FontFamily="MaterialRegular"
+                                            Glyph="{x:Static m:MaterialRegular.Delete_outline}"
+                                            Color="{AppThemeBinding Light=Black,
+                                                                    Dark=White}" />
+                                    </SwipeItem.IconImageSource>
+                                </SwipeItem>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
+                        <Grid
+                            Padding="20,5,20,5"
+                            BackgroundColor="{StaticResource OffBlack}"
+                            ColumnDefinitions="*"
+                            RowDefinitions="*,*">
+                            <Label
+                                Grid.Row="0"
+                                FontAttributes="Bold"
+                                Text="{Binding UserName}" />
+                            <Label
+                                Grid.Row="1"
+                                HorizontalOptions="Start"
+                                Text="{Binding FullName}" />
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

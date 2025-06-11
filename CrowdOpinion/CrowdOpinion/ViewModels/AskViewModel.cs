@@ -1,9 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System.Collections.ObjectModel;
-using CrowdOpinion.Services;
 using CrowdOpinion.Models;
-using System.Threading.Tasks;
+using CrowdOpinion.Services;
+using System.Diagnostics;
+using ImageCropper.Maui;
+
 
 namespace CrowdOpinion.ViewModels
 {
@@ -31,42 +32,76 @@ namespace CrowdOpinion.ViewModels
         [ObservableProperty]
         private string _answerTwoImage;
 
-        //public ObservableCollection<QuestionObject> Questions => _questionStore.Questions;
         [RelayCommand]
-        private async void PickImageOne()
+        public async Task FrameOneTapped()
         {
-            var result = await FilePicker.PickAsync(new PickOptions
+            if (MediaPicker.Default.IsCaptureSupported)
             {
-                FileTypes = FilePickerFileType.Images
-            });
+                FileResult photo = await MediaPicker.Default.PickPhotoAsync();
 
-            if (result == null) return;
+                if (photo != null)
+                {
+                    AnswerOneImage = photo.FullPath;
+                }
+            }
 
-            AnswerOneImage = result.FullPath;
         }
 
         [RelayCommand]
-        private async void PickImageTwo()
+        public async Task FrameTwoTapped()
         {
-            var result = await FilePicker.PickAsync(new PickOptions
+            if (MediaPicker.Default.IsCaptureSupported)
             {
-                FileTypes = FilePickerFileType.Images
-            });
+                FileResult photo = await MediaPicker.Default.PickPhotoAsync();
 
-            if (result == null) return;
+                if (photo != null)
+                {
+                    AnswerTwoImage = photo.FullPath;
+                }
+            }
 
-            AnswerTwoImage = result.FullPath;
         }
 
         [RelayCommand]
+        public async Task PickImageOne()
+        {
+            if (MediaPicker.Default.IsCaptureSupported)
+            {
+                FileResult photo = await MediaPicker.Default.PickPhotoAsync();
 
+                if (photo != null)
+                {
+                    AnswerOneImage = photo.FullPath;
+                }
+            }
+
+        }
+
+        [RelayCommand]
+        public async Task PickImageTwo()
+        {
+            if (MediaPicker.Default.IsCaptureSupported)
+            {
+                FileResult photo = await MediaPicker.Default.PickPhotoAsync();
+
+                if (photo != null)
+                {
+                    AnswerTwoImage = photo.FullPath;
+                }
+
+            }
+        }
+
+        [RelayCommand]
         private async Task AskQuestion()
         {
             try
             {
                 if (!string.IsNullOrEmpty(QuestionText) &&
                     !string.IsNullOrEmpty(AnswerOneText) &&
-                    !string.IsNullOrEmpty(AnswerTwoText))
+                    !string.IsNullOrEmpty(AnswerTwoText) &&
+                    !string.IsNullOrEmpty(AnswerOneImage) &&
+                    !string.IsNullOrEmpty(AnswerTwoImage))
                 {
                     QuestionObjectSupa questionObjectSupa = new()
                     {
@@ -77,6 +112,14 @@ namespace CrowdOpinion.ViewModels
                         AnswerTwoCount = 0,
                     };
                     await _dataService.CreateQuestionObject(questionObjectSupa, AnswerOneImage, AnswerTwoImage);
+
+                    QuestionText = string.Empty;
+                    AnswerOneText = string.Empty;
+                    AnswerTwoText = string.Empty;
+                    AnswerOneImage = string.Empty;
+                    AnswerTwoImage = string.Empty;
+
+                    await Shell.Current.GoToAsync("//ProfileShellTab");
                 }
                 else
                 {

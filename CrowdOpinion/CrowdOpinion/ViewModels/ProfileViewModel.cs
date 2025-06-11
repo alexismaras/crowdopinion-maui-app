@@ -17,6 +17,7 @@ namespace CrowdOpinion.ViewModels
         public ProfileViewModel(IDataService dataService)
         {
             _dataService = dataService;
+            Refresh();
         }
 
         [RelayCommand]
@@ -57,6 +58,7 @@ namespace CrowdOpinion.ViewModels
             try
             {
                 await _dataService.DeleteQuestionObject(questionObjectSupa.Id);
+                QuestionObjects.Remove(questionObjectSupa);
             }
             catch (Exception ex)
             {

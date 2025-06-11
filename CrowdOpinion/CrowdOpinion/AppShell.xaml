@@ -8,7 +8,10 @@
     xmlns:pages="clr-namespace:CrowdOpinion.Pages"
     Title="CrowdOpinion">
     <TabBar>
-        <ShellContent Title="Answer" ContentTemplate="{DataTemplate pages:Answer}">
+        <ShellContent
+            Title="Answer"
+            ContentTemplate="{DataTemplate pages:Answer}"
+            Route="AnswerShellTab">
             <ShellContent.Icon>
                 <FontImageSource
                     FontFamily="MaterialRegular"
@@ -17,7 +20,10 @@
                                             Dark=White}" />
             </ShellContent.Icon>
         </ShellContent>
-        <ShellContent Title="Ask" ContentTemplate="{DataTemplate pages:Ask}">
+        <ShellContent
+            Title="Ask"
+            ContentTemplate="{DataTemplate pages:Ask}"
+            Route="AskShellTab">
             <ShellContent.Icon>
                 <FontImageSource
                     FontFamily="MaterialRegular"
@@ -26,7 +32,22 @@
                                             Dark=White}" />
             </ShellContent.Icon>
         </ShellContent>
-        <ShellContent Title="Profile" ContentTemplate="{DataTemplate pages:Profile}">
+        <ShellContent
+            Title="Search"
+            ContentTemplate="{DataTemplate pages:Search}"
+            Route="SearchShellTab">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="MaterialRegular"
+                    Glyph="{x:Static m:MaterialRegular.Search}"
+                    Color="{AppThemeBinding Light=Black,
+                                            Dark=White}" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent
+            Title="Profile"
+            ContentTemplate="{DataTemplate pages:Profile}"
+            Route="ProfileShellTab">
             <ShellContent.Icon>
                 <FontImageSource
                     FontFamily="MaterialRegular"

@@ -3,6 +3,7 @@
     x:Class="CrowdOpinion.Pages.Answer"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:viewmodel="clr-namespace:CrowdOpinion.ViewModels"
     Title="Answer"
     x:DataType="viewmodel:AnswerViewModel">
@@ -11,44 +12,107 @@
         Command="{Binding RefreshCommand}"
         IsRefreshing="{Binding IsRefreshing}"
         RefreshColor="{StaticResource Primary}">
-        <ScrollView Padding="20">
-            <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*">
-                <Label
-                    Grid.Row="0"
-                    Grid.ColumnSpan="2"
-                    SemanticProperties.HeadingLevel="Level1"
-                    Style="{StaticResource Headline}"
-                    Text="{Binding RandomQuestionObject.Question}"
-                    TextColor="{AppThemeBinding Light=Black,
-                                                Dark=White}"
-                    VerticalOptions="Center" />
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    BackgroundColor="red"
-                    Command="{Binding ChooseAnswerOneCommand}"
-                    Text="{Binding RandomQuestionObject.AnswerOne}"
-                    TextColor="{AppThemeBinding Light=Black,
-                                                Dark=White}" />
-                <Button
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    BackgroundColor="blue"
-                    Command="{Binding ChooseAnswerTwoCommand}"
-                    Text="{Binding RandomQuestionObject.AnswerTwo}"
-                    TextColor="{AppThemeBinding Light=Black,
-                                                Dark=White}" />
+        <ScrollView Padding="10,50,10,50">
+            <Border
+                BackgroundColor="#222"
+                StrokeShape="RoundRectangle 10,10,10,10"
+                StrokeThickness="0">
+                <VerticalStackLayout
+                    Padding="20"
+                    Spacing="20"
+                    VerticalOptions="Center">
 
-                <Image
-                    Grid.Row="2"
-                    Grid.Column="0"
-                    Source="dotnet_bot.png" />
-                <Image
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    Source="dotnet_bot.png" />
-            </Grid>
+                    <Border Padding="10" StrokeShape="RoundRectangle 6,6,6,6">
+                        <Grid>
+                            <Image Source="{Binding QuestionAuthorProfile.AvatarUrl, StringFormat='https://kecjwzwulktcrykauczv.supabase.co/storage/v1/object/public/avatars/{0}'}" WidthRequest="50" />
+                            <Label Grid.Column="1" Text="{Binding QuestionAuthorProfile.UserName}" />
+                        </Grid>
+                    </Border>
 
+                    <Grid
+                        Grid.Row="1"
+                        ColumnDefinitions="*,*"
+                        ColumnSpacing="10"
+                        RowDefinitions="*,300"
+                        RowSpacing="10"
+                        VerticalOptions="End">
+
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"
+                            SemanticProperties.HeadingLevel="Level1"
+                            Style="{StaticResource SubHeadline}"
+                            Text="{Binding RandomQuestionObject.Question}"
+                            TextColor="{AppThemeBinding Light=Black,
+                                                        Dark=White}"
+                            VerticalOptions="Center" />
+                        <Border
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Stroke="LightGray"
+                            StrokeShape="RoundRectangle 8,8,8,8"
+                            StrokeThickness="1">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ChooseAnswerOneCommand}" />
+                            </Border.GestureRecognizers>
+                            <Grid RowDefinitions="*">
+                                <Image
+                                    Grid.Row="0"
+                                    Aspect="AspectFill"
+                                    Source="{Binding RandomQuestionObject.AnswerOneImgUrl, StringFormat='https://kecjwzwulktcrykauczv.supabase.co/storage/v1/object/public/images/{0}'}" />
+                                <Label
+                                    Grid.Row="0"
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding RandomQuestionObject.AnswerOne}"
+                                    VerticalOptions="Center">
+                                    <Label.Shadow>
+                                        <Shadow
+                                            Brush="Black"
+                                            Opacity="1"
+                                            Radius="5"
+                                            Offset="0,0" />
+                                    </Label.Shadow>
+                                </Label>
+                            </Grid>
+                        </Border>
+
+                        <Border
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Stroke="LightGray"
+                            StrokeShape="RoundRectangle 8,8,8,8"
+                            StrokeThickness="1">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ChooseAnswerTwoCommand}" />
+                            </Border.GestureRecognizers>
+                            <Grid RowDefinitions="*">
+                                <Image
+                                    Grid.Row="0"
+                                    Aspect="AspectFill"
+                                    Source="{Binding RandomQuestionObject.AnswerTwoImgUrl, StringFormat='https://kecjwzwulktcrykauczv.supabase.co/storage/v1/object/public/images/{0}'}" />
+                                <Label
+                                    Grid.Row="0"
+                                    FontAttributes="Bold"
+                                    FontSize="20"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding RandomQuestionObject.AnswerTwo}"
+                                    VerticalOptions="Center">
+                                    <Label.Shadow>
+                                        <Shadow
+                                            Brush="Black"
+                                            Opacity="1"
+                                            Radius="5"
+                                            Offset="0,0" />
+                                    </Label.Shadow>
+                                </Label>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
         </ScrollView>
     </RefreshView>
 

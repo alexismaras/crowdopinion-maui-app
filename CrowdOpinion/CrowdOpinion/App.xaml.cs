@@ -1,7 +1,8 @@
 ﻿using CrowdOpinion.Helper;
 using CrowdOpinion.Pages;
-using CrowdOpinion.ViewModels;
 using CrowdOpinion.Services;
+using CrowdOpinion.ViewModels;
+using System.Diagnostics;
 
 namespace CrowdOpinion
 {
@@ -25,18 +26,39 @@ namespace CrowdOpinion
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            bool isUserLoggedIn = _dataService.IsUserLoggedIn().GetAwaiter().GetResult();
-            if (isUserLoggedIn)
+            // Create a temporary window to show immediately
+            var loadingWindow = new Window(new ContentPage
             {
-                return new Window(new AppShell());
-            }
-            else
-            {
-                return new Window(new Login(_loginViewModel));
-            }
+                Content = new ActivityIndicator { IsRunning = true, Scale = 0.1 }
+            });
+
+            // Start the auth check without blocking
+            _ = CheckAuthAndNavigate(loadingWindow);
+
+            return loadingWindow;
         }
 
+        private async Task CheckAuthAndNavigate(Window loadingWindow)
+        {
+            try
+            {
+                bool isUserLoggedIn = await _dataService.IsUserLoggedIn();
 
+                if (!isUserLoggedIn)
+                {
+                    isUserLoggedIn = await _dataService.RestoreLastSession();
+                }
+
+                loadingWindow.Page = isUserLoggedIn
+                        ? new AppShell()
+                        : new Login(_loginViewModel);
+            }
+            catch (Exception ex)
+            {
+                loadingWindow.Page = new Login(_loginViewModel);
+                Debug.WriteLine($"Auth check failed: {ex}");
+            }
+        }
         private void HandleLoginSucceeded()
         {
             if (Application.Current != null)

@@ -1,10 +1,11 @@
-﻿using Microsoft.Extensions.Logging;
-using UraniumUI;
-using CrowdOpinion.ViewModels;
+﻿using CommunityToolkit.Maui;
 using CrowdOpinion.Models;
 using CrowdOpinion.Pages;
 using CrowdOpinion.Services;
+using CrowdOpinion.ViewModels;
+using Microsoft.Extensions.Logging;
 using Supabase;
+using UraniumUI;
 
 namespace CrowdOpinion
 {
@@ -15,6 +16,9 @@ namespace CrowdOpinion
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
+                .UseUraniumUI()
+                .UseUraniumUIMaterial()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -28,11 +32,12 @@ namespace CrowdOpinion
 
             builder.Services.AddSingleton(provider => new Supabase.Client(url, key));
 
-            builder.Services.AddSingleton<QuestionStore>();
             builder.Services.AddSingleton<AskViewModel>();
             builder.Services.AddSingleton<Ask>();
             builder.Services.AddSingleton<AnswerViewModel>();
             builder.Services.AddSingleton<Answer>();
+            builder.Services.AddSingleton<SearchViewModel>();
+            builder.Services.AddSingleton<Search>();
             builder.Services.AddSingleton<ProfileViewModel>();
             builder.Services.AddSingleton<Profile>();
             builder.Services.AddTransient<LoginViewModel>();

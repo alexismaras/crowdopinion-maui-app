@@ -1,8 +1,10 @@
 ﻿using CrowdOpinion.Models;
 using CrowdOpinion.ViewModels;
 using Microsoft.Maui.ApplicationModel.Communication;
-using Supabase;
 using Microsoft.Maui.Storage;
+using Supabase;
+using Supabase.Gotrue;
+using Supabase.Gotrue.Exceptions;
 
 namespace CrowdOpinion.Services
 {
@@ -31,6 +33,22 @@ namespace CrowdOpinion.Services
             var response = await _supabaseClient
                 .From<QuestionObjectSupa>()
                 .Where(x => x.UserId == user.Id)  // Assuming your model has UserId property
+                .Get();
+
+            return response.Models.OrderByDescending(b => b.CreatedAt);
+        }
+
+        public async Task<IEnumerable<QuestionObjectSupa>> GetForeignQuestionObject()
+        {
+            var session = _supabaseClient.Auth.CurrentSession;
+
+            var user = await _supabaseClient.Auth.GetUser(session.AccessToken);
+            if (user == null) throw new UnauthorizedAccessException("User not authenticated");
+
+            // Filter by the user's UID
+            var response = await _supabaseClient
+                .From<QuestionObjectSupa>()
+                .Where(x => x.UserId != user.Id)  // Assuming your model has UserId property
                 .Get();
 
             return response.Models.OrderByDescending(b => b.CreatedAt);
@@ -83,21 +101,96 @@ namespace CrowdOpinion.Services
                 .Update();
         }
 
-        public async Task SignUp(string email, string password)
+        public async Task<AuthResult> SignUp(string email, string password, ProfileObject profileObject)
         {
-            var user = await _supabaseClient.Auth.SignUp(email, password);
+
+            try
+            {
+                var session = await _supabaseClient.Auth.SignUp(email, password);
+
+                if (session?.User == null)
+                {
+                    return AuthResult.Failure("Registration failed");
+                }
+
+                var user = session.User;
+                Console.WriteLine(user.Id.ToString());
+
+                profileObject.UserId = user.Id;
+                await CreateUserProfile(profileObject);
+
+                return AuthResult.Success("Registration successful", session);
+            }
+            catch (Exception ex)
+            {
+                // Generic error handling
+                return AuthResult.Failure($"Registration error: {ex.Message}");
+            }
         }
 
-        public async Task SignIn(string email, string password)
+        public async Task CreateUserProfile(ProfileObject profileObject)
         {
-            var session = await _supabaseClient.Auth.SignIn(email, password);
-            await SecureStorage.SetAsync("supabase_refresh_token", session.RefreshToken);
-            await SecureStorage.SetAsync("supabase_access_token", session.AccessToken);
+            await _supabaseClient.From<ProfileObject>().Insert(profileObject);
+        }
+
+        public async Task<AuthResult> SignIn(string email, string password)
+        {
+            try
+            {
+                var session = await _supabaseClient.Auth.SignIn(email, password);
+
+                if (session?.User == null)
+                {
+                    return AuthResult.Failure("Authentication failed");
+                }
+                
+                await SecureStorage.Default.SetAsync("session_refresh_token", session.RefreshToken);
+                await SecureStorage.Default.SetAsync("session_access_token", session.AccessToken);
+
+                return AuthResult.Success("Login successful", session);
+            }
+            catch (GotrueException ex) when (ex.Message.Contains("Invalid login credentials"))
+            {
+                // Specific handling for wrong password/email
+                return AuthResult.Failure("Incorrect email or password");
+            }
+            catch (GotrueException ex) when (ex.Message.Contains("Email not confirmed"))
+            {
+                return AuthResult.Failure("Please verify your email first");
+            }
+            catch (Exception ex)
+            {
+                // Generic error handling
+                return AuthResult.Failure($"Login error: {ex.Message}");
+            }
         }
 
         public async Task SignOut()
         {
             await _supabaseClient.Auth.SignOut();
+        }
+
+        public async Task<bool> RestoreLastSession()
+        {
+            try
+            {
+                var refreshToken = await SecureStorage.Default.GetAsync("session_refresh_token");
+                var accessToken = await SecureStorage.Default.GetAsync("session_access_token");
+
+                if (refreshToken == null || accessToken == null) return false;
+                var session = await _supabaseClient.Auth.SetSession(accessToken, refreshToken);
+
+                if (session == null) return false;
+
+                await SecureStorage.Default.SetAsync("session_refresh_token", session.RefreshToken);
+                await SecureStorage.Default.SetAsync("session_access_token", session.AccessToken);
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public async Task<bool> IsUserLoggedIn()
@@ -119,6 +212,32 @@ namespace CrowdOpinion.Services
             }
         }
 
+        public async Task<IEnumerable<ProfileObject>> GetUserProfilesByUsername(string searchString)
+        {
+            string lowerCaseSearchString = searchString.ToLower();
+            var response = await _supabaseClient.From<ProfileObject>()
+                .Select("username")
+                .Where(x => x.UserName.Contains(lowerCaseSearchString))
+                .Get();
+            return response.Models.OrderByDescending(b => b.CreatedAt);
+        }
 
+        public async Task<ProfileObject> GetUserProfileByUuid(string uuid)
+        {
+            try
+            {
+                var response = await _supabaseClient.From<ProfileObject>()
+                    .Where(x => x.UserId == uuid)
+                    .Single();
+
+                Console.WriteLine(response.UserName);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
     }
 }
