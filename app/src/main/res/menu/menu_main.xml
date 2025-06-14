@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/answer"
+        android:title="Answer"
+        android:icon="@drawable/answer_icon"/>
+    <item
+        android:id="@+id/ask"
+        android:title="Ask"
+        android:icon="@drawable/ask_icon"/>
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/search_icon"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"/>
+</menu>

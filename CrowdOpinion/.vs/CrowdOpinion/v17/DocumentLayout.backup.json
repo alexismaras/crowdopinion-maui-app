@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\pages\\answer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\pages\\answer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\pages\\profile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\pages\\profile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\viewmodels\\answerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\viewmodels\\answerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\services\\dataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\pages\\answer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\pages\\answer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\pages\\answer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\pages\\answer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\crowdopinion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\crowdopinion.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\viewmodels\\answerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\viewmodels\\answerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\services\\idataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,10 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\pages\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\pages\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|solutionrelative:crowdopinion\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2CB8D4EC-34AD-4CE2-870D-694E0C32F3E3}|CrowdOpinion\\CrowdOpinion.csproj|c:\\users\\user\\onedrive\\dokumente\\github\\crowdopinion-maui-app\\crowdopinion\\crowdopinion\\viewmodels\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -189,7 +189,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -202,8 +202,7 @@
               "ViewState": "AgIAAAMAAAAAAAAAAIBJwBcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-01T22:17:09.195Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -211,46 +210,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "Profile.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Profile.xaml",
+              "RelativeDocumentMoniker": "CrowdOpinion\\Pages\\Profile.xaml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Profile.xaml",
+              "RelativeToolTip": "CrowdOpinion\\Pages\\Profile.xaml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-02T11:44:03.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\ProfileViewModel.cs",
+              "RelativeDocumentMoniker": "CrowdOpinion\\ViewModels\\ProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\ProfileViewModel.cs",
+              "RelativeToolTip": "CrowdOpinion\\ViewModels\\ProfileViewModel.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwB0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T11:43:04.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "CrowdOpinion\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\MauiProgram.cs",
+              "RelativeToolTip": "CrowdOpinion\\MauiProgram.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAmwBMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T22:23:32.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AnswerViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\AnswerViewModel.cs",
+              "RelativeDocumentMoniker": "CrowdOpinion\\ViewModels\\AnswerViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\AnswerViewModel.cs",
+              "RelativeToolTip": "CrowdOpinion\\ViewModels\\AnswerViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T11:19:04.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Answer.xaml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Answer.xaml",
               "RelativeDocumentMoniker": "CrowdOpinion\\Pages\\Answer.xaml",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Answer.xaml",
               "RelativeToolTip": "CrowdOpinion\\Pages\\Answer.xaml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-06T13:59:04.04Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Profile.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Profile.xaml",
-              "RelativeDocumentMoniker": "CrowdOpinion\\Pages\\Profile.xaml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Profile.xaml",
-              "RelativeToolTip": "CrowdOpinion\\Pages\\Profile.xaml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAcAAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-02T11:44:03.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProfileViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\ProfileViewModel.cs",
-              "RelativeDocumentMoniker": "CrowdOpinion\\ViewModels\\ProfileViewModel.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\ProfileViewModel.cs",
-              "RelativeToolTip": "CrowdOpinion\\ViewModels\\ProfileViewModel.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAzwB0AAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T11:43:04.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\ViewModels\\LoginViewModel.cs",
@@ -258,12 +279,11 @@
               "RelativeToolTip": "CrowdOpinion\\ViewModels\\LoginViewModel.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAYwFUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T08:41:48.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T08:41:48.209Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "DataService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Services\\DataService.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\Services\\DataService.cs",
@@ -271,12 +291,11 @@
               "RelativeToolTip": "CrowdOpinion\\Services\\DataService.cs",
               "ViewState": "AgIAAH8AAAAAAAAAAAAYwJUAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T15:28:44.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T15:28:44.9Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Login.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Login.xaml.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\Pages\\Login.xaml.cs",
@@ -284,12 +303,11 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\Login.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T11:54:59.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T11:54:59.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Answer.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Answer.xaml.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\Pages\\Answer.xaml.cs",
@@ -297,25 +315,23 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\Answer.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T22:17:50.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T22:17:50.66Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "CrowdOpinion.csproj",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\CrowdOpinion.csproj",
               "RelativeDocumentMoniker": "CrowdOpinion\\CrowdOpinion.csproj",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\CrowdOpinion.csproj*",
-              "RelativeToolTip": "CrowdOpinion\\CrowdOpinion.csproj*",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\CrowdOpinion.csproj",
+              "RelativeToolTip": "CrowdOpinion\\CrowdOpinion.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-01T22:08:01.56Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T22:08:01.56Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Login.xaml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Login.xaml",
               "RelativeDocumentMoniker": "CrowdOpinion\\Pages\\Login.xaml",
@@ -323,25 +339,11 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\Login.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-03T08:41:28.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T08:41:28.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AnswerViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\AnswerViewModel.cs",
-              "RelativeDocumentMoniker": "CrowdOpinion\\ViewModels\\AnswerViewModel.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\AnswerViewModel.cs",
-              "RelativeToolTip": "CrowdOpinion\\ViewModels\\AnswerViewModel.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAwwEUAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T11:19:04.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AskViewModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\ViewModels\\AskViewModel.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\ViewModels\\AskViewModel.cs",
@@ -349,12 +351,11 @@
               "RelativeToolTip": "CrowdOpinion\\ViewModels\\AskViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T09:24:51.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T09:24:51.915Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\App.xaml.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\App.xaml.cs",
@@ -362,12 +363,11 @@
               "RelativeToolTip": "CrowdOpinion\\App.xaml.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAwwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T22:27:05.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T22:27:05.347Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "IDataService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Services\\IDataService.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\Services\\IDataService.cs",
@@ -375,12 +375,11 @@
               "RelativeToolTip": "CrowdOpinion\\Services\\IDataService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T15:24:16.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T15:24:16.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ProfileObject.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Models\\ProfileObject.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\Models\\ProfileObject.cs",
@@ -388,12 +387,11 @@
               "RelativeToolTip": "CrowdOpinion\\Models\\ProfileObject.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAcwCEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T08:32:37.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T08:32:37.891Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "AuthResult.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Models\\AuthResult.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\Models\\AuthResult.cs",
@@ -401,12 +399,11 @@
               "RelativeToolTip": "CrowdOpinion\\Models\\AuthResult.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T11:03:06.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T11:03:06.421Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\App.xaml",
               "RelativeDocumentMoniker": "CrowdOpinion\\App.xaml",
@@ -419,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\AppShell.xaml",
               "RelativeDocumentMoniker": "CrowdOpinion\\AppShell.xaml",
@@ -427,12 +424,11 @@
               "RelativeToolTip": "CrowdOpinion\\AppShell.xaml",
               "ViewState": "AgIAAAYAAAAAAAAAAIBJwCQAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-01T22:13:09.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T22:13:09.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Settings.xaml.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Settings.xaml.cs",
               "RelativeDocumentMoniker": "CrowdOpinion\\Pages\\Settings.xaml.cs",
@@ -440,25 +436,11 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\Settings.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T11:13:24.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T11:13:24.821Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "CrowdOpinion\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\MauiProgram.cs",
-              "RelativeToolTip": "CrowdOpinion\\MauiProgram.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAuwCcAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T22:23:32.78Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "Search.xaml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Dokumente\\GitHub\\crowdopinion-maui-app\\CrowdOpinion\\CrowdOpinion\\Pages\\Search.xaml",
               "RelativeDocumentMoniker": "CrowdOpinion\\Pages\\Search.xaml",
@@ -466,8 +448,7 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\Search.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwAwAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-10T13:56:16.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T13:56:16.372Z"
             },
             {
               "$type": "Document",
@@ -479,8 +460,7 @@
               "RelativeToolTip": "CrowdOpinion\\ViewModels\\SearchViewModel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAwwC8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T13:59:28.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T13:59:28.67Z"
             },
             {
               "$type": "Document",
@@ -492,8 +472,7 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\Settings.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-04T11:10:37.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T11:10:37.436Z"
             },
             {
               "$type": "Document",
@@ -505,8 +484,7 @@
               "RelativeToolTip": "CrowdOpinion\\ViewModels\\SettingsViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T11:11:00.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T11:11:00.11Z"
             },
             {
               "$type": "Document",
@@ -518,8 +496,7 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\Search.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T14:01:31.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T14:01:31.11Z"
             },
             {
               "$type": "Document",
@@ -531,8 +508,7 @@
               "RelativeToolTip": "CrowdOpinion\\Models\\QuestionObjectSupa.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T15:16:36.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T15:16:36.533Z"
             },
             {
               "$type": "Document",
@@ -544,8 +520,7 @@
               "RelativeToolTip": "CrowdOpinion\\Models\\AppConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T15:23:00.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T15:23:00.971Z"
             },
             {
               "$type": "Document",
@@ -557,8 +532,7 @@
               "RelativeToolTip": "CrowdOpinion\\AppShell.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T22:26:53.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T22:26:53.416Z"
             },
             {
               "$type": "Document",
@@ -583,8 +557,7 @@
               "RelativeToolTip": "CrowdOpinion\\Drawables\\RatioGraphicsView.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAIA6wCEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T18:30:25.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T18:30:25.109Z"
             },
             {
               "$type": "Document",
@@ -596,8 +569,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\.nuget\\packages\\communitytoolkit.maui\\11.1.1\\ReadMe.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-06-08T13:35:20.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-08T13:35:20.913Z"
             },
             {
               "$type": "Document",
@@ -620,8 +592,7 @@
               "RelativeToolTip": "CrowdOpinion\\Resources\\AppIcon\\appicon.svg",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATvSURBVEhLtZZrbFRFFMd/d193724ppYUt2NKHtCAPoYCAgiAIKiRKAMGGgJpoKIJfRIh\u002BMX4RY0KsIESIWBLU4gdqVURJNCiIiYQIbWmxIFCQllcLTbul3b37uHP8cLfbhaIhMZ5k7kwmM//fmTMzZy78nyYi2p19ANXV1duBNdhj6K3vbKeUHStWrFh7u8q/WHV1tdyr1dbWSlVVlezZs2f7nToAjjs7Uq3XQyWCUoIohRKFUgqlLCzL4sKFCyxduhSl1JqKiop\u002BkLsCkqEAQlELK1hL7PonWJcnYNYMpvtng9BvYxDzUnJsaWkplmWt2bp1622QfnuQvvoL1/opvlh86Ciwmpk3fC9j0k5iXD\u002BPisZxBl5COcbhcJpE/tzGwei7LFu2jFgsRiQSYdeuXfj9/h2rVq1a2w8w9PWvC4dkDqwoKRz8\u002BJOTspmZuYn7Yrvo/NXJUVlCI3NIHzaFl2cU4HJo3Pg0m9OFVbS0tBCJRIhGoxQUFHD16lXKyso0AFef\u002BDf5gYy0/U/MGlc8vyjINH0FaZ0HuXRsNvVj36bB9RDnW7u5\u002BMdlrnV08/YzY/EMn8/kyZMoKCggbIYxvAbZ2dlUVlYmnXaQCEtWxoDd82Y9OLL0gRbPLH0JaWcPcmz/LDZa77PneAZtLZ3kBdIZPb6QuqCDd75txF38AobPR25uLsUjisnJycHn8yX3JQnIyhr49Oj8QNGCojZXiWMl7voGTtYtILD8Oz5eXkL5omImpFm0NjaT7nEzJGcItW1hmhyTQAQQRFNJ0X6AAT7XosWTXZmPGGWaq\u002Bk0J2unU/LKAfKzfAAMS/fy4rRcOjpvMdDhxuFy4vL7\u002BLLmalII0RIwUKoP5gLIG6RPmZm12fB1HeX0pefZlLWOjo\u002BOEbOslNuqMHx\u002BTCcYbifidnPqyk0QQbC1e09M6gpcAKunHc/LVZ9rLQcncnj6e4z3BuxJ2B9bwAZZEQurB2JKYcUtFKAJaNigfgDpGTOzp2ObETyky74Z\u002B7UO52D55cAJTcVjtncCQiIPiaCUQhA0hIcLM9HEjk6vI/0BodaFzmvtzn3WumibleGJRq1brmhP\u002Bg\u002BvzyUWj9kC9jQk4a0NtEMiCWUbagfptk2WrvZHg2f0rh\u002BtpTfONbcLSvyB/PvY8FUjp64EiSuhJxqn8VoXr\u002B2tZ86WI8z\u002B4AhzPzxCVe2VpKCG1pdiUlcQatHGeAaqytq64DhPO4MG\u002BLy\u002BnKI8Il3dbDx0iRs3ghgeJ\u002BnpaRSOKmbKSAdtN7u41dTE4gnDEsuzxe8aImViZS6MvZq3vjugm/GfTtWpwpwR\u002Bf7sIQMoLBnN/YnTF41btNwMEmxtJ97RzuZnJ\u002BB0aH2B/wdzaA6\u002Bb/uMN5vLn2sbTv1TWueZmusNdZyuOcPvNWc50fAXp\u002BrP09RwjuDFZgbFeviotISigD95AJKU3ip1DzSXvKG5mX95C7I7460jlb6yA1ON1sMzcvxkhm/hvnmd4WIyNcvF\u002BsfyqVg5kbxMOx3climlD5QKuKtVVFQcFxGJREwxI6aYpimmGRYzHBYzHBIzHJZwOCThUEjC4R4JpdQiIuXl5UnCPz04kwE8Hh3do6PrOrruRfd60b0GuteL12vgNQy8Xh9GSp2Yn9Tq9\u002BAA7Ny5c7uIrOm9vUop\u002B5TcpZAQTG0DOzZs2HDvPwH/xf4Gb5LkTqfRE7EAAAAASUVORK5CYII=",
-              "WhenOpened": "2025-06-05T15:26:10.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T15:26:10.411Z"
             },
             {
               "$type": "Document",
@@ -633,8 +604,7 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\Ask.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T22:18:04.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-01T22:18:04.637Z"
             },
             {
               "$type": "Document",
@@ -646,8 +616,7 @@
               "RelativeToolTip": "CrowdOpinion\\Resources\\AppIcon\\appiconfg.svg",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATvSURBVEhLtZZrbFRFFMd/d193724ppYUt2NKHtCAPoYCAgiAIKiRKAMGGgJpoKIJfRIh\u002BMX4RY0KsIESIWBLU4gdqVURJNCiIiYQIbWmxIFCQllcLTbul3b37uHP8cLfbhaIhMZ5k7kwmM//fmTMzZy78nyYi2p19ANXV1duBNdhj6K3vbKeUHStWrFh7u8q/WHV1tdyr1dbWSlVVlezZs2f7nToAjjs7Uq3XQyWCUoIohRKFUgqlLCzL4sKFCyxduhSl1JqKiop\u002BkLsCkqEAQlELK1hL7PonWJcnYNYMpvtng9BvYxDzUnJsaWkplmWt2bp1622QfnuQvvoL1/opvlh86Ciwmpk3fC9j0k5iXD\u002BPisZxBl5COcbhcJpE/tzGwei7LFu2jFgsRiQSYdeuXfj9/h2rVq1a2w8w9PWvC4dkDqwoKRz8\u002BJOTspmZuYn7Yrvo/NXJUVlCI3NIHzaFl2cU4HJo3Pg0m9OFVbS0tBCJRIhGoxQUFHD16lXKyso0AFef\u002BDf5gYy0/U/MGlc8vyjINH0FaZ0HuXRsNvVj36bB9RDnW7u5\u002BMdlrnV08/YzY/EMn8/kyZMoKCggbIYxvAbZ2dlUVlYmnXaQCEtWxoDd82Y9OLL0gRbPLH0JaWcPcmz/LDZa77PneAZtLZ3kBdIZPb6QuqCDd75txF38AobPR25uLsUjisnJycHn8yX3JQnIyhr49Oj8QNGCojZXiWMl7voGTtYtILD8Oz5eXkL5omImpFm0NjaT7nEzJGcItW1hmhyTQAQQRFNJ0X6AAT7XosWTXZmPGGWaq\u002Bk0J2unU/LKAfKzfAAMS/fy4rRcOjpvMdDhxuFy4vL7\u002BLLmalII0RIwUKoP5gLIG6RPmZm12fB1HeX0pefZlLWOjo\u002BOEbOslNuqMHx\u002BTCcYbifidnPqyk0QQbC1e09M6gpcAKunHc/LVZ9rLQcncnj6e4z3BuxJ2B9bwAZZEQurB2JKYcUtFKAJaNigfgDpGTOzp2ObETyky74Z\u002B7UO52D55cAJTcVjtncCQiIPiaCUQhA0hIcLM9HEjk6vI/0BodaFzmvtzn3WumibleGJRq1brmhP\u002Bg\u002BvzyUWj9kC9jQk4a0NtEMiCWUbagfptk2WrvZHg2f0rh\u002BtpTfONbcLSvyB/PvY8FUjp64EiSuhJxqn8VoXr\u002B2tZ86WI8z\u002B4AhzPzxCVe2VpKCG1pdiUlcQatHGeAaqytq64DhPO4MG\u002BLy\u002BnKI8Il3dbDx0iRs3ghgeJ\u002BnpaRSOKmbKSAdtN7u41dTE4gnDEsuzxe8aImViZS6MvZq3vjugm/GfTtWpwpwR\u002Bf7sIQMoLBnN/YnTF41btNwMEmxtJ97RzuZnJ\u002BB0aH2B/wdzaA6\u002Bb/uMN5vLn2sbTv1TWueZmusNdZyuOcPvNWc50fAXp\u002BrP09RwjuDFZgbFeviotISigD95AJKU3ip1DzSXvKG5mX95C7I7460jlb6yA1ON1sMzcvxkhm/hvnmd4WIyNcvF\u002BsfyqVg5kbxMOx3climlD5QKuKtVVFQcFxGJREwxI6aYpimmGRYzHBYzHBIzHJZwOCThUEjC4R4JpdQiIuXl5UnCPz04kwE8Hh3do6PrOrruRfd60b0GuteL12vgNQy8Xh9GSp2Yn9Tq9\u002BAA7Ny5c7uIrOm9vUop\u002B5TcpZAQTG0DOzZs2HDvPwH/xf4Gb5LkTqfRE7EAAAAASUVORK5CYII=",
-              "WhenOpened": "2025-06-06T11:14:03.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T11:14:03.677Z"
             },
             {
               "$type": "Document",
@@ -659,8 +628,7 @@
               "RelativeToolTip": "CrowdOpinion\\Drawables\\RatioBarDrawable.cs",
               "ViewState": "AgIAABkAAAAAAAAAAADwvzMAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T17:42:37.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T17:42:37.988Z"
             },
             {
               "$type": "Document",
@@ -685,8 +653,7 @@
               "RelativeToolTip": "CrowdOpinion\\Platforms\\Android\\Resources\\values\\colors.xml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-06-06T12:08:06.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T12:08:06.574Z"
             },
             {
               "$type": "Document",
@@ -698,8 +665,7 @@
               "RelativeToolTip": "CrowdOpinion\\Resources\\Splash\\splash.svg",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATvSURBVEhLtZZrbFRFFMd/d193724ppYUt2NKHtCAPoYCAgiAIKiRKAMGGgJpoKIJfRIh\u002BMX4RY0KsIESIWBLU4gdqVURJNCiIiYQIbWmxIFCQllcLTbul3b37uHP8cLfbhaIhMZ5k7kwmM//fmTMzZy78nyYi2p19ANXV1duBNdhj6K3vbKeUHStWrFh7u8q/WHV1tdyr1dbWSlVVlezZs2f7nToAjjs7Uq3XQyWCUoIohRKFUgqlLCzL4sKFCyxduhSl1JqKiop\u002BkLsCkqEAQlELK1hL7PonWJcnYNYMpvtng9BvYxDzUnJsaWkplmWt2bp1622QfnuQvvoL1/opvlh86Ciwmpk3fC9j0k5iXD\u002BPisZxBl5COcbhcJpE/tzGwei7LFu2jFgsRiQSYdeuXfj9/h2rVq1a2w8w9PWvC4dkDqwoKRz8\u002BJOTspmZuYn7Yrvo/NXJUVlCI3NIHzaFl2cU4HJo3Pg0m9OFVbS0tBCJRIhGoxQUFHD16lXKyso0AFef\u002BDf5gYy0/U/MGlc8vyjINH0FaZ0HuXRsNvVj36bB9RDnW7u5\u002BMdlrnV08/YzY/EMn8/kyZMoKCggbIYxvAbZ2dlUVlYmnXaQCEtWxoDd82Y9OLL0gRbPLH0JaWcPcmz/LDZa77PneAZtLZ3kBdIZPb6QuqCDd75txF38AobPR25uLsUjisnJycHn8yX3JQnIyhr49Oj8QNGCojZXiWMl7voGTtYtILD8Oz5eXkL5omImpFm0NjaT7nEzJGcItW1hmhyTQAQQRFNJ0X6AAT7XosWTXZmPGGWaq\u002Bk0J2unU/LKAfKzfAAMS/fy4rRcOjpvMdDhxuFy4vL7\u002BLLmalII0RIwUKoP5gLIG6RPmZm12fB1HeX0pefZlLWOjo\u002BOEbOslNuqMHx\u002BTCcYbifidnPqyk0QQbC1e09M6gpcAKunHc/LVZ9rLQcncnj6e4z3BuxJ2B9bwAZZEQurB2JKYcUtFKAJaNigfgDpGTOzp2ObETyky74Z\u002B7UO52D55cAJTcVjtncCQiIPiaCUQhA0hIcLM9HEjk6vI/0BodaFzmvtzn3WumibleGJRq1brmhP\u002Bg\u002BvzyUWj9kC9jQk4a0NtEMiCWUbagfptk2WrvZHg2f0rh\u002BtpTfONbcLSvyB/PvY8FUjp64EiSuhJxqn8VoXr\u002B2tZ86WI8z\u002B4AhzPzxCVe2VpKCG1pdiUlcQatHGeAaqytq64DhPO4MG\u002BLy\u002BnKI8Il3dbDx0iRs3ghgeJ\u002BnpaRSOKmbKSAdtN7u41dTE4gnDEsuzxe8aImViZS6MvZq3vjugm/GfTtWpwpwR\u002Bf7sIQMoLBnN/YnTF41btNwMEmxtJ97RzuZnJ\u002BB0aH2B/wdzaA6\u002Bb/uMN5vLn2sbTv1TWueZmusNdZyuOcPvNWc50fAXp\u002BrP09RwjuDFZgbFeviotISigD95AJKU3ip1DzSXvKG5mX95C7I7460jlb6yA1ON1sMzcvxkhm/hvnmd4WIyNcvF\u002BsfyqVg5kbxMOx3climlD5QKuKtVVFQcFxGJREwxI6aYpimmGRYzHBYzHBIzHJZwOCThUEjC4R4JpdQiIuXl5UnCPz04kwE8Hh3do6PrOrruRfd60b0GuteL12vgNQy8Xh9GSp2Yn9Tq9\u002BAA7Ny5c7uIrOm9vUop\u002B5TcpZAQTG0DOzZs2HDvPwH/xf4Gb5LkTqfRE7EAAAAASUVORK5CYII=",
-              "WhenOpened": "2025-06-02T08:20:45.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T08:20:45.352Z"
             },
             {
               "$type": "Document",
@@ -711,8 +677,7 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\ConfirmSignup.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-06T07:36:44.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T07:36:44.88Z"
             },
             {
               "$type": "Document",
@@ -724,8 +689,7 @@
               "RelativeToolTip": "CrowdOpinion\\Resources\\Raw\\AboutAssets.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-06-05T15:26:25.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T15:26:25.387Z"
             },
             {
               "$type": "Document",
@@ -737,8 +701,7 @@
               "RelativeToolTip": "CrowdOpinion\\.gitignore",
               "ViewState": "AgIAALsBAAAAAAAAAAAswMsBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-04T16:14:32.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-04T16:14:32.152Z"
             },
             {
               "$type": "Document",
@@ -750,8 +713,7 @@
               "RelativeToolTip": "CrowdOpinion\\FodyWeavers.xml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-06-03T08:53:18.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T08:53:18.303Z"
             },
             {
               "$type": "Document",
@@ -763,8 +725,7 @@
               "RelativeToolTip": "CrowdOpinion\\Pages\\Profile.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T11:44:36.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T11:44:36.179Z"
             },
             {
               "$type": "Document",
@@ -776,8 +737,7 @@
               "RelativeToolTip": "CrowdOpinion\\Helper\\AppConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-03T09:50:58.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T09:50:58.15Z"
             }
           ]
         }
